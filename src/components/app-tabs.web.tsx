@@ -27,6 +27,9 @@ export default function AppTabs() {
           <TabTrigger name="customers" href="/customers" asChild>
             <TabButton>Customers</TabButton>
           </TabTrigger>
+          <TabTrigger name="account" href="/account" asChild>
+            <TabButton>Account</TabButton>
+          </TabTrigger>
         </CustomTabList>
       </TabList>
     </Tabs>

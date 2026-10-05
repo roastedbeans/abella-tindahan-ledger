@@ -54,3 +54,14 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Demo accounts
+
+Sign in on the first screen. These are test accounts in Supabase Auth; the role of each is in the `profiles` table. The admin is the store owner; a client is a customer.
+
+| Role | Email | Password | Can do |
+|---|---|---|---|
+| admin | `admin@tindahan.test` | `tindahan-admin` | See customers, add a customer, take a store photo |
+| client | `client@tindahan.test` | `tindahan-client` | See customers |
+
+A new account created in the app is always a `client`. There is exactly one admin, the store owner.
