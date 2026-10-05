@@ -9,12 +9,14 @@ import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { Spacing } from "@/constants/theme";
 import { useCustomers } from "@/hooks/use-customers";
+import { useProfile } from "@/hooks/use-profile";
 import { useTheme } from "@/hooks/use-theme";
 
 export default function CustomersScreen() {
   const theme = useTheme();
   const router = useRouter();
   const { status, customers, problem, retry } = useCustomers();
+  const profile = useProfile();
   const [query, setQuery] = useState("");
   const [adding, setAdding] = useState(false);
 
@@ -53,7 +55,9 @@ export default function CustomersScreen() {
         style={[styles.search, { color: theme.text, borderColor: theme.textSecondary }]}
       />
       <ThemedText>Total owed: ₱ {total.toFixed(2)}</ThemedText>
-      <Button title="Add customer" onPress={() => setAdding(true)} />
+      {profile?.role === "admin" && (
+        <Button title="Add customer" onPress={() => setAdding(true)} />
+      )}
       <FlatList
         data={shown}
         keyExtractor={(c) => c.id}

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Demo Expo App",
-    "slug": "demo-expo-app",
+    "name": "Tindahan Ledger",
+    "slug": "tindahan-ledger",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "tindahanledger",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -34,7 +34,14 @@
         }
       ],
       "expo-image",
-      "expo-web-browser"
+      "expo-web-browser",
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Tindahan Ledger uses the camera to take a photo of the store."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
